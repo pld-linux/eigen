@@ -17,7 +17,7 @@ math, a.k.a. linear algebra.
 %setup -q -n %{name}
 
 %build
-mkdir build
+install -d build
 cd build
 %cmake \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
