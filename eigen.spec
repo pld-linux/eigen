@@ -1,7 +1,7 @@
 Summary:	template library for linear algebra
 Name:		eigen
 Version:	1.0.5
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download.tuxfamily.org/eigen/%{name}-%{version}.tar.gz
