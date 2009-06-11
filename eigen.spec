@@ -1,13 +1,14 @@
 
 Summary:	template library for linear algebra
 Name:		eigen
-Version:	2.0.2
+Version:	2.0.52
 Release:	1
 License:	GPL v2
 Group:		Libraries
-Source0:	http://download.tuxfamily.org/eigen/%{name}-%{version}.tar.bz2
-# Source0-md5:	b2c34144943671a8689b6fab20c52836
+Source0:	http://bitbucket.org/eigen/eigen2/get/default.tar.bz2
+# Source0-md5:	b15d5cdb7b02a59eabde849412e9d0c4
 URL:		http://eigen.tuxfamily.org/index.php?title=Main_Page
+BuildRequires:	cmake >= 2.6.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,8 +45,20 @@ and related algorithms. It is:
   templates and heavy metaprogramming. Eigen is also standard C++ and
   supports various compilers.
 
+%package devel
+Summary:	Header files for eigen2 library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki eigen2
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+Header files for eigen2 library.
+
+%description devel -l pl.UTF-8
+Pliki nagłówkowe biblioteki eigen2
+
 %prep
-%setup -q
+%setup -q -n %{name}2
 
 %build
 install -d build
@@ -61,9 +74,16 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT/%{_pkgconfigdir}
+cp build/eigen2.pc $RPM_BUILD_ROOT/%{_pkgconfigdir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %{_includedir}/eigen2
+
+%files devel
+%defattr(644,root,root,755)
+%{_pkgconfigdir}/eigen2.pc
