@@ -76,6 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/%{_pkgconfigdir}
 cp build/eigen2.pc $RPM_BUILD_ROOT/%{_pkgconfigdir}
+rm $RPM_BUILD_ROOT/usr/lib/pkgconfig/eigen2.pc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
