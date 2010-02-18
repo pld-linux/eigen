@@ -1,7 +1,7 @@
 
 Summary:	template library for linear algebra
 Name:		eigen
-Version:	2.91
+Version:	2.91.0
 Release:	1
 License:	GPL v2
 Group:		Libraries
