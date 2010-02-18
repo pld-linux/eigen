@@ -1,12 +1,12 @@
 
 Summary:	template library for linear algebra
 Name:		eigen
-Version:	2.91
+Version:	2.0.12
 Release:	1
 License:	GPL v2
 Group:		Libraries
-Source0:	http://bitbucket.org/eigen/eigen/get/default.tar.bz2
-# Source0-md5:	397a5555a2c0d200cfad32746368ceba
+Source0:	http://bitbucket.org/eigen/eigen/get/2.0.tar.bz2
+# Source0-md5:	a2f10e6b21a36f3c0ef73271209f706f
 URL:		http://eigen.tuxfamily.org/
 BuildRequires:	cmake >= 2.6.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -77,15 +77,15 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/%{_pkgconfigdir}
-cp build/eigen3.pc $RPM_BUILD_ROOT/%{_pkgconfigdir}
+cp build/eigen2.pc $RPM_BUILD_ROOT/%{_pkgconfigdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_includedir}/eigen3
+%{_includedir}/eigen2
 
 %files devel
 %defattr(644,root,root,755)
-%{_pkgconfigdir}/eigen3.pc
+%{_pkgconfigdir}/eigen2.pc
