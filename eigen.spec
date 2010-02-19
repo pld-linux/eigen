@@ -2,7 +2,7 @@
 Summary:	template library for linear algebra
 Name:		eigen
 Version:	2.0.12
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v2
 Group:		Libraries
@@ -50,7 +50,7 @@ and related algorithms. It is:
 Summary:	Header files for eigen2 library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki eigen2
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Header files for eigen2 library.
