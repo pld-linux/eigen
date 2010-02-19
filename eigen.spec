@@ -3,6 +3,7 @@ Summary:	template library for linear algebra
 Name:		eigen
 Version:	2.0.12
 Release:	1
+Epoch:		1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://bitbucket.org/eigen/eigen/get/2.0.tar.bz2
