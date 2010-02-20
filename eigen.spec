@@ -9,6 +9,7 @@ Source0:	http://bitbucket.org/eigen/eigen/get/default.tar.bz2
 # Source0-md5:	397a5555a2c0d200cfad32746368ceba
 URL:		http://eigen.tuxfamily.org/
 BuildRequires:	cmake >= 2.6.2
+Obsoletes:	%{name}-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,18 +46,6 @@ and related algorithms. It is:
   templates and heavy metaprogramming. Eigen is also standard C++ and
   supports various compilers.
 
-%package devel
-Summary:	Header files for eigen2 library
-Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki eigen2
-Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-
-%description devel
-Header files for eigen2 library.
-
-%description devel -l pl.UTF-8
-Pliki nagłówkowe biblioteki eigen2
-
 %prep
 %setup -q -n %{name}
 
@@ -85,7 +74,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{_includedir}/eigen3
-
-%files devel
-%defattr(644,root,root,755)
 %{_pkgconfigdir}/eigen3.pc
