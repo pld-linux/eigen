@@ -5,7 +5,7 @@ Version:	2.0.15
 Release:	1
 Epoch:		1
 License:	LGPL v3+ or GPL v2+
-Group:		Libraries
+Group:		Development/Libraries
 Source0:	http://bitbucket.org/eigen/eigen/get/%{version}.tar.bz2
 # Source0-md5:	a96fe69d652d7b3b1d990c99bbc518fb
 URL:		http://eigen.tuxfamily.org/
