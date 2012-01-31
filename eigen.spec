@@ -11,6 +11,7 @@ Source0:	http://bitbucket.org/eigen/eigen/get/%{version}.tar.bz2
 URL:		http://eigen.tuxfamily.org/
 BuildRequires:	cmake >= 2.6.2
 BuildRequires:	rpmbuild(macros) >= 1.577
+Requires:	libstdc++-devel
 Obsoletes:	eigen-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
