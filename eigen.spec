@@ -1,13 +1,13 @@
 Summary:	Template library for linear algebra
 Summary(pl.UTF-8):	Biblioteka szablonów do algebry liniowej
 Name:		eigen
-Version:	2.0.15
+Version:	2.0.17
 Release:	1
 Epoch:		1
 License:	LGPL v3+ or GPL v2+
 Group:		Development/Libraries
 Source0:	http://bitbucket.org/eigen/eigen/get/%{version}.tar.bz2
-# Source0-md5:	a96fe69d652d7b3b1d990c99bbc518fb
+# Source0-md5:	2dfd1e2765d82c306adbfcd6a0eb324b
 URL:		http://eigen.tuxfamily.org/
 BuildRequires:	cmake >= 2.6.2
 BuildRequires:	rpmbuild(macros) >= 1.577
@@ -47,7 +47,7 @@ Obsługuje bez powielania kodu i w całkowicie zintegrowany sposób:
    na tablicach.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n eigen-eigen-b23437e61a07
 
 %build
 install -d build
