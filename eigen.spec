@@ -2,7 +2,7 @@ Summary:	Template library for linear algebra
 Summary(pl.UTF-8):	Biblioteka szablonów do algebry liniowej
 Name:		eigen
 Version:	2.0.17
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL v3+ or GPL v2+
 Group:		Development/Libraries
